@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Archive of Our Own RSS</h1>
+<p>Suprisingly, AO3 doesn't support RSS for works and I couldn't find an easy-to-understand solution, so I made one myself.</p>
+
+<h2>Get feed from ID</h2>
+<form action="/from/id" method="get">
+	<label>
+		ID:
+		<input type="number" name="id" id="id" required>
+	</label>	
+	<button type="submit">Submit</button>
+</form>
+
+<h2>Get feed from URL</h2>
+<form action="/from/url" method="get">
+	<label>
+		URL:
+		<input type="url" name="url" id="url" required>
+	</label>
+	<button type="submit">Submit</button>
+</form>
+
+{% endblock %}
